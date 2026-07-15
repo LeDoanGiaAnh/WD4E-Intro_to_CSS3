@@ -14,9 +14,17 @@ header {
 }
 
 /* Step 5: Style the nav (modify background color) */
-nav {
-    background-color: #34495e;
-    padding: 10px;
+/* Đổi màu chữ của các liên kết trong thanh nav thành màu trắng hoặc màu sáng */
+nav a {
+    color: #ffffff; /* Màu trắng giúp tương phản rõ ràng trên nền tối */
+    text-decoration: none; /* Bỏ gạch chân nếu muốn trông gọn gàng hơn */
+    font-weight: bold;
+}
+
+/* Thêm hiệu ứng khi di chuột qua (tùy chọn giúp trang sinh động hơn) */
+nav a:hover {
+    color: #f1c40f; /* Chuyển sang màu vàng nhạt khi di chuột vào */
+    text-decoration: underline;
 }
 
 /* Step 6: Style the main (modify background color and font size) */
