@@ -44,10 +44,10 @@ footer {
 
 /* Step 8: Style the li (modify display and width properties) */
 /* Thường yêu cầu này để biến danh sách menu dọc thành menu ngang */
-li {
+/* li {
     display: inline-block;
     width: 120px;
-}
+} */
 
 /* Step 9: Style the h1 (modify text alignment, font family, and color) */
 h1 {
@@ -60,4 +60,56 @@ h1 {
 p {
     line-height: 1.8;
     color: #333333;
+}
+
+/* Ẩn thẻ ẩn nhảy nhanh một cách tinh tế (chỉ hiện khi tab vào) */
+.skip-link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: #f1c40f;
+    padding: 10px;
+    color: black;
+}
+
+/* Step 4: Change nav element */
+nav {
+    display: inline-block;
+    width: 80%;
+}
+
+/* Step 5: Descendant selector for image in nav */
+nav img {
+    width: 10%;
+}
+
+/* Step 6 & 8: Style the grid class (Two-column layout) */
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    
+    /* Điều chỉnh các thuộc tính này để khớp với ảnh mẫu của bài học */
+    justify-content: space-around; /* hoặc space-between, center */
+    align-items: start;            /* hoặc center, stretch */
+    row-gap: 20px;                 /* khoảng cách giữa các hàng */
+}
+
+/* Step 7: Descendant selector for images ONLY inside grid class */
+.grid img {
+    width: 100%;
+}
+
+/* Step 9: Style the flex class */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Hãy thử thay đổi thành center, space-around tùy ảnh mẫu */
 }
